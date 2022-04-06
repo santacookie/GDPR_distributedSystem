@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+package ds.service2;
+
+service ProductInfo {
+    rpc addProduct(Product) returns (ProductID);
+    rpc getProduct(ProductID) returns (Product);
+}
+
+message Product {
+    string employedId = 1;
+    string name = 2;
+    string description = 3;
+    string quantity = 4;
+}
+
+message ProductID {
+    string orderCode = 1;
+}
